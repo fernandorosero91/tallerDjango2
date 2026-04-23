@@ -1,0 +1,15 @@
+{% extends 'gestion/base.html' %}
+
+{% block title %}Eliminar {{ tipo }}{% endblock %}
+
+{% block content %}
+
+<h1>Eliminar {{ tipo }}</h1>
+<p>¿Desea eliminar <strong>{{ objeto }}</strong>?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Sí, eliminar</button>
+</form>
+<a href="{{ cancelar_url }}">Cancelar</a>
+
+{% endblock %}
