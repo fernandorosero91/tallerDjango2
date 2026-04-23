@@ -1,0 +1,14 @@
+{% extends 'gestion/base.html' %}
+
+{% block title %}Lista de Autores{% endblock %}
+
+{% block content %}
+
+<h1>Eliminar Autor</h1> 
+<p>¿Desea eliminar {{ autor.nombre }}?</p> 
+<form method="post"> 
+  {% csrf_token %} 
+  <button type="submit">Sí, eliminar</button> 
+</form> 
+
+{% endblock %}
