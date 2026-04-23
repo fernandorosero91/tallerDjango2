@@ -5,6 +5,14 @@ from .models import Autor, Libro
 from .forms import AutorForm, LibroForm
 
 # ─────────────────────────────────────────
+# HOME
+# ─────────────────────────────────────────
+
+def home(request):
+    return render(request, 'gestion/home.html')
+
+
+# ─────────────────────────────────────────
 # VISTAS POR FUNCIÓN (Function-Based Views)
 # ─────────────────────────────────────────
 
