@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+echo "Generando migraciones..."
+python manage.py makemigrations --noinput
+
 echo "Aplicando migraciones..."
 python manage.py migrate --noinput
 
