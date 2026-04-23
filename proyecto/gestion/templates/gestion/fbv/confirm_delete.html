@@ -1,0 +1,22 @@
+{% extends 'gestion/fbv/base.html' %}
+
+{% block title %}Eliminar {{ tipo }} — FBV{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto bg-white rounded-xl shadow p-8 text-center">
+  <div class="text-red-500 text-5xl mb-4">⚠️</div>
+  <h1 class="text-xl font-bold text-slate-800 mb-2">Eliminar {{ tipo }}</h1>
+  <p class="text-slate-600 mb-6">¿Estás seguro de que deseas eliminar <strong>{{ objeto }}</strong>? Esta acción no se puede deshacer.</p>
+  <form method="post" class="flex justify-center gap-3">
+    {% csrf_token %}
+    <button type="submit"
+            class="bg-red-500 hover:bg-red-600 text-white text-sm px-5 py-2 rounded shadow">
+      Sí, eliminar
+    </button>
+    <a href="{{ cancelar_url }}"
+       class="bg-slate-200 hover:bg-slate-300 text-slate-700 text-sm px-5 py-2 rounded">
+      Cancelar
+    </a>
+  </form>
+</div>
+{% endblock %}
